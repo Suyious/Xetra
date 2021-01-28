@@ -1,38 +1,315 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+	background: #E4C2D2;
+	color: #000;
+	overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.Logo h1{
+	font-size: 2em;
+	font-family: 'Playfair Display';
+	padding: 0 0.5em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Logo span{
+	color: #ff0000;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes poing {
+  from {margin-left: -10em;}
+  to {margin-left: 0em;}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hamburger svg{
+	margin-top: 0.6em;
+	width: 30px;
+	height: auto;
+}
+
+.fill-white svg path{
+	fill: #fff;
+}
+
+.fill-white h1{
+	color: #fff;
+}
+
+.hamburger{
+	padding: 0 0.5em;
+	border-radius: 50px;
+}
+
+.hamburger,.Logo,.Trending,.SignUp button,.Cart{
+	cursor: pointer;	
+}
+
+/* .hamburger:hover{
+	background: #1f21231e;
+} */
+
+.Trending, .Cart{
+	display: flex;
+	align-items: center;
+}
+
+.Trending h1,.Cart h1{
+	font-family: 'Poppins';
+	font-weight: 300;
+	padding: 0 1em;
+}
+
+.Trending svg{
+	width: 20px;
+	height: auto;
+}
+
+.SignUp button{
+	outline: none;
+	border: none;
+	font-family: Poppins;
+	font-size: 1em;
+	padding: 0.5em 2.5em;
+	margin: 0 1em;
+	border-radius: 15px;
+	background: #fff;
+}
+
+.SignUp button:hover{
+	background: rgb(248, 248, 248);
+}
+
+.Cart{
+	margin: 0.3em 1m;
+}
+
+.Cart_svg svg{
+	padding: 0.3em 0;
+	width: 35px;
+	height: auto;
+}
+
+.Cart h1{
+	animation: poing 500ms ease;
+}
+
+.navwidth{
+	max-width: 95vw;
+	margin: 0 auto;
+}
+
+.boxwidth{
+	max-width: 90vw;
+	margin: 0 auto;
+}
+
+.Left,.Right{
+	display: flex;
+	align-items: center;
+	z-index: 1;
+	transition: all 500ms ease;
+}
+
+/* Navigation */
+
+.Navigation{
+	/* color: #f6f7f9; */
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+
+.Nav{
+	margin-top: 1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Sidebar */
+.sidebar,.blur{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100vh;
+	overflow: hidden;
+	background: #1e1f207a;
+}
+
+
+.sidebar_show,.blur_show{
+	width: 25em;
+	transition: width 500ms ease;
+}
+
+
+.sidebar ul{
+	list-style: none;
+	margin:5em 0;
+}
+
+.sidebar ul li{
+	padding: 1em 2em;
+	font-size: 1.5em;
+	text-decoration: none;
+	font-family: Poppins;
+	color: #fff;
+	cursor: pointer;
+}
+
+.sidebar ul li:hover{
+	background: #1f21236c;
+}
+
+
+.Hero_title{
+	margin-top: 13em;
+}
+
+.Hero_title h1{
+	font-size: 21em;
+	color: #1F2123;
+	transition: all 500ms ease;
+}
+
+.Hero_title span{
+	color: #AB6262;
+}
+
+.small_title{
+	margin-top: 9em;
+}
+
+.small_title h1{
+	font-size: 10em;
+}
+
+.Heropar{
+	margin-top: -0.3em;
+}
+
+
+/* Background */
+
+
+.background .heroback{
+	width: 70vh;
+	position: fixed;
+	bottom: 0;
+	right: 3em;
+
+}
+
+.ribbon{
+	position: absolute;
+	top: 34em;
+	z-index: -1;
+	width: 100vw;
+	height: 3em;
+	background: #fff;
+	transition: opacity 500ms ease;
+}
+
+.vanish{
+	opacity: 0;
+}
+
+.appear{opacity: 100}
+
+.Hero_subtext h2{
+	font-family: Roboto;
+	color: #1F2123;
+	font-size: 4em;
+}
+
+.Hero_subtext button h3{
+	font-family: Poppins;
+	font-size: 2em;
+}
+
+.Hero_subtext h3{
+	font-family: Poppins;
+	font-size: 1em;
+}
+
+.Hero_subtext h3 span{
+	color: #FD2323;
+	cursor: pointer;
+}
+
+.Hero_subtext button{
+	display: inline;
+	padding: 1em 4em;
+	outline: none;
+	border: none;
+	margin: 1em auto;
+	border-radius: 50px;
+	margin-top: 2em;
+	background: #fff;
+	cursor: pointer;
+}
+
+.Hero_subtext .button-content{
+	display: flex;
+}
+
+.Hero_subtext svg{
+	margin: 0 1em;
+	width: 35px;
+	height: auto;
+}
+
+.Option-box{
+	width: 40%;	
+	text-align: center;
+}
+
+.scroller{
+	position: absolute;
+	bottom: 0.5em;
+	width: 100vw;
+}
+
+.overlay{
+	border-radius: 20px;
+	margin: 0 auto;
+	width: 95vw;
+	height: 4em;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 500ms ease;
+}
+
+.overlay:hover{
+	background: rgba(0,0,0,0.25);
+}
+
+.overlay:hover svg path{
+	fill: rgba(228, 228, 228, 0.938);
+}
+
+.overlay svg{
+	width: 20px;
+	height: auto;
+	transition: all 500ms ease;
+}
+
+.overlay svg path{
+	fill: rgba(49, 49, 49, 0.938);
+}
+
+.rotate{
+	transform: rotate(180deg);
 }
