@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Xetra/static/css/main.4794bf7e.chunk.css",
-    "main.js": "/Xetra/static/js/main.009b0d70.chunk.js",
-    "main.js.map": "/Xetra/static/js/main.009b0d70.chunk.js.map",
+    "main.css": "/Xetra/static/css/main.c8325fa3.chunk.css",
+    "main.js": "/Xetra/static/js/main.b4251aa6.chunk.js",
+    "main.js.map": "/Xetra/static/js/main.b4251aa6.chunk.js.map",
     "runtime-main.js": "/Xetra/static/js/runtime-main.5c0de013.js",
     "runtime-main.js.map": "/Xetra/static/js/runtime-main.5c0de013.js.map",
     "static/js/2.0be989d9.chunk.js": "/Xetra/static/js/2.0be989d9.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.92ee22b2.chunk.js": "/Xetra/static/js/3.92ee22b2.chunk.js",
     "static/js/3.92ee22b2.chunk.js.map": "/Xetra/static/js/3.92ee22b2.chunk.js.map",
     "index.html": "/Xetra/index.html",
-    "static/css/main.4794bf7e.chunk.css.map": "/Xetra/static/css/main.4794bf7e.chunk.css.map",
+    "static/css/main.c8325fa3.chunk.css.map": "/Xetra/static/css/main.c8325fa3.chunk.css.map",
     "static/js/2.0be989d9.chunk.js.LICENSE.txt": "/Xetra/static/js/2.0be989d9.chunk.js.LICENSE.txt",
     "static/media/BackgroundPic.0126a8c2.png": "/Xetra/static/media/BackgroundPic.0126a8c2.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5c0de013.js",
     "static/js/2.0be989d9.chunk.js",
-    "static/css/main.4794bf7e.chunk.css",
-    "static/js/main.009b0d70.chunk.js"
+    "static/css/main.c8325fa3.chunk.css",
+    "static/js/main.b4251aa6.chunk.js"
   ]
 }
