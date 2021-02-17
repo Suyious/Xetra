@@ -4,25 +4,37 @@ import Sidebar from "./Sidebar";
 function Navigation({handleScroll,scrolled}) {
 
   const [NavOpen, setNavOpen] = useState(false);
+  const [CartOpen, setCartOpen] = useState(false);
 
   const NavHandle = () =>{
     setNavOpen(!NavOpen);
+    setCartOpen(false);
+  }
+
+  const CartHandle = () =>{
+    setCartOpen(!CartOpen);
+    setNavOpen(false);
   }
 
   return (
     <nav className="Navigation">
-      <Sidebar NavOpen={NavOpen}/>
+      <div className="Leftbar">
+        <Sidebar className="Rightbar" Open={NavOpen}>
+          <ul>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+          </ul>
+        </Sidebar>
+
+      </div>
       <div className="Nav navwidth">
+
         <div className="Left">
           <div onClick={NavHandle} className={`hamburger ${NavOpen && "fill-white"}`}>
-            {!NavOpen?
-            <svg width="41" height="29" viewBox="0 0 41 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.666687 26.5417C0.666687 27.7613 1.65539 28.75 2.87502 28.75H38.125C39.3447 28.75 40.3334 27.7613 40.3334 26.5417V26.5417C40.3334 25.322 39.3447 24.3333 38.125 24.3333H2.87502C1.65539 24.3333 0.666687 25.322 0.666687 26.5417V26.5417ZM0.666687 14.7639C0.666687 15.9835 1.65539 16.9722 2.87502 16.9722H38.125C39.3447 16.9722 40.3334 15.9835 40.3334 14.7639V14.7639C40.3334 13.5443 39.3447 12.5555 38.125 12.5555H2.87502C1.65539 12.5555 0.666687 13.5443 0.666687 14.7639V14.7639ZM2.87502 0.777771C1.65539 0.777771 0.666687 1.76648 0.666687 2.9861V2.9861C0.666687 4.20573 1.65539 5.19444 2.87502 5.19444H38.125C39.3447 5.19444 40.3334 4.20573 40.3334 2.9861V2.9861C40.3334 1.76648 39.3447 0.777771 38.125 0.777771H2.87502Z" fill="black"/>
-            </svg>
-            :
-            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.59618 29.6985C3.81517 30.4795 2.54881 30.4795 1.76781 29.6985L1.41423 29.3449C0.633163 28.5638 0.633163 27.2975 1.41423 26.5165L12.3744 15.5563L1.41423 4.59618C0.633163 3.81511 0.633163 2.54881 1.41423 1.76775L1.76781 1.41417C2.54881 0.633163 3.81517 0.633163 4.59618 1.41417L15.5564 12.3744L26.5165 1.41417C27.2976 0.633102 28.5639 0.633102 29.345 1.41417L29.6985 1.76775C30.4795 2.54875 30.4795 3.81511 29.6985 4.59618L18.7383 15.5563L29.6985 26.5165C30.4795 27.2975 30.4795 28.5639 29.6985 29.3449L29.345 29.6985C28.5639 30.4795 27.2976 30.4795 26.5165 29.6985L15.5564 18.7383L4.59618 29.6985Z" fill="black"/>
-            </svg>}
+            <div className="rectangle top"></div>
+            <div className="rectangle middle"></div>
+            <div className="rectangle bottom"></div>
           </div>
           <div className={`Logo ${NavOpen && "fill-white"}`}>
             <h1><span className="Red">X</span>etra</h1>
@@ -46,11 +58,11 @@ function Navigation({handleScroll,scrolled}) {
         </div>
 
         <div className="Right">
-          {!scrolled && <div className="SignUp">
+          {!scrolled && !CartOpen && <div className="SignUp">
             <button onClick={handleScroll}>Sign Up</button>
           </div>}
-          <div className="Cart">
-            {scrolled && <h1>Cart</h1>}
+          <div onClick={CartHandle} className={`Cart ${CartOpen && "fill-white"}`}>
+            {scrolled || CartOpen && <h1>Cart</h1>}
             <div className="Cart_svg">
               <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.4584 39.75C13.0292 39.75 11.0638 41.7375 11.0638 44.1667C11.0638 46.5958 13.0292 48.5833 15.4584 48.5833C17.8875 48.5833 19.875 46.5958 19.875 44.1667C19.875 41.7375 17.8875 39.75 15.4584 39.75ZM4.41671 4.41666C3.19708 4.41666 2.20837 5.40536 2.20837 6.62499C2.20837 7.84462 3.19708 8.83332 4.41671 8.83332H4.91388C5.95891 8.83332 6.91051 9.43518 7.35835 10.3794L11.9277 20.0132C13.59 23.5177 13.4657 27.6078 11.5938 31.005C11.2405 31.6233 11.0417 32.3521 11.0417 33.125C11.0417 35.5542 13.0292 37.5417 15.4584 37.5417H39.75C40.9697 37.5417 41.9584 36.553 41.9584 35.3333C41.9584 34.1137 40.9697 33.125 39.75 33.125H16.3859C16.1221 33.125 15.9066 32.9482 15.849 32.7044C15.8287 32.6187 15.8446 32.5297 15.866 32.4443C15.8886 32.3537 15.9229 32.2665 15.968 32.1849L16.2599 31.6561C17.2641 29.8375 19.1774 28.7083 21.2548 28.7083H34.3396C35.9959 28.7083 37.4534 27.8029 38.2042 26.4337L46.11 12.1017C46.2867 11.7925 46.375 11.4171 46.375 11.0417C46.375 9.82707 45.3813 8.83332 44.1667 8.83332H13.9455C12.4562 8.83332 11.101 7.97284 10.4675 6.62499C9.83405 5.27714 8.47884 4.41666 6.98954 4.41666H4.41671ZM37.5417 39.75C35.1125 39.75 33.1471 41.7375 33.1471 44.1667C33.1471 46.5958 35.1125 48.5833 37.5417 48.5833C39.9709 48.5833 41.9584 46.5958 41.9584 44.1667C41.9584 41.7375 39.9709 39.75 37.5417 39.75Z" fill="black"/>
@@ -59,6 +71,17 @@ function Navigation({handleScroll,scrolled}) {
           </div>
         </div>
 
+        
+      </div>
+
+      <div className="Rightbar">
+        <Sidebar Open={CartOpen}>
+          <ul>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+          </ul>
+        </Sidebar>
       </div>
     </nav>
   );

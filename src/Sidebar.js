@@ -1,15 +1,11 @@
 import React from "react";
 
-function Sidebar({ NavOpen }) {
+function Sidebar({ Open, children}) {
   return (
     <div className="wrapper">
-      <div className={`blur ${NavOpen && "blur_show"}`}></div>
-      <div className={`sidebar ${NavOpen && "sidebar_show"}`}>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </ul>
+      <div className={`blur ${Open && "blur_show"}`}></div>
+      <div className={`sidebar ${Open && "sidebar_show"}`}>
+        {children}
       </div>
     </div>
   );
