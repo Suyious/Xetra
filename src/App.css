@@ -14,6 +14,11 @@ body {
   overflow: hidden;
 }
 
+.App{
+  overflow: hidden;
+}
+
+
 .Logo h1 {
   font-size: 2em;
   font-family: "Playfair Display";
@@ -174,6 +179,7 @@ body {
   position: absolute;
   top: 7px;
   width: 0;
+  max-width: 95vw;
   height: 98.5vh;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.3);
@@ -214,6 +220,7 @@ body {
 .sidebar ul li:hover {
   background: #1f21236c;
 }
+
 
 .Hero_title {
   margin-top: 13em;
@@ -299,10 +306,12 @@ body {
   margin-top: 2em;
   background: #fff;
   cursor: pointer;
+  min-width: 22em;
 }
 
 .Hero_subtext .button-content {
   display: flex;
+  justify-content: space-between;
 }
 
 .Hero_subtext svg {

@@ -70,8 +70,6 @@ function Navigation({handleScroll,scrolled}) {
             </div>
           </div>
         </div>
-
-        
       </div>
 
       <div className="Rightbar">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import "./queries.css"
 import Background from "./Background";
 import Navigation from "./Navigation"
 

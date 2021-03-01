@@ -1,0 +1,77 @@
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { }
+ 
+@media all and (max-width: 480px) { 
+  .Hero_title h1 {
+    font-size: 6.2em;
+    margin-left: -0.3em;
+  }
+
+  .Hero_title {
+    margin-top: 15em;
+  }
+
+  .Trending h1,.Cart h1, .SignUp{
+    display: none;
+  }
+
+  .Cart{
+    margin-right: 1.5em;
+  }
+
+  .background .heroback{
+    z-index: -1;
+    top: 5em;
+    left: 0;
+  }
+
+  .ribbon{
+    top: 10em;
+    z-index: -2;
+  }
+
+  .Hero .vanish{
+    opacity: 100;
+  }
+
+  .Hero_subtext h2{
+    display: none;
+  }
+
+  .Hero_subtext button{
+    padding: 1em 2em;
+  }
+
+  .Hero_subtext svg {
+    margin: 0 1em;
+    width: 30px;
+    height: auto;
+  }
+  
+  .Hero_subtext .button-content h3{
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  .Hero_subtext h3 span {
+    color: #e20000;
+  }
+  
+  .Option-box{
+    width: 100%;
+  }
+
+  .scroller{
+    display: none;
+  }
+}
