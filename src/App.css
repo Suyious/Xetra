@@ -312,6 +312,7 @@ body {
 .Hero_subtext .button-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .Hero_subtext svg {
