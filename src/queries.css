@@ -5,16 +5,108 @@
    768-480     - tablet 
    480-less    - phone landscape & smaller
 --------------------------------------------*/
-@media all and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media all and (max-width: 1700px){
+  .Hero_subtext{
+    max-width: 65vw;
+  }
+  .big_title h1 {
+    font-size: 17em;
+  }
+
+  
+
+  .Hero_subtext button{
+    padding: 1em 4em;
+  }
+
+  .Hero_subtext .button-content h3{
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .Hero_subtext svg {
+    margin: 0 1em;
+    width: 30px;
+    height: auto;
+  }
+
+}
+
+@media all and (max-width: 1500px){
+  .Hero_subtext button{
+    padding: 1em 3em;
+  }
+
+  .Hero_subtext .button-content h3{
+    font-size: 1.4em;
+  }
+} 
+
+@media all and (max-width: 1280px) {
+  .big_title h1 {
+    font-size: 13em;
+  }
+  
+  .big_title {
+    margin-top: 18em;
+  }
+
+  .small_title h1{
+    font-size: 6em;
+  }
+
+  .Hero_subtext h2{
+    font-size: 2em;
+  }
+
+  .background .heroback{
+    right: -4em;
+  }
+
+  .Hero_subtext button{
+    padding: 1em 3em;
+  }
+
+  .Hero_subtext .button-content h3{
+    font-size: 1.3em;
+  }
+
+  .Option-box{
+    width: 60%;
+  }
+
+ }
+
+@media all and (max-width: 1024px) {
+  .big_title h1{
+    font-size: 11em;
+  }
+
+  .small_title{
+    margin-top: 15em;
+  }
+
+  .Option-box{
+    width: 60%;
+  }
+ }
  
-@media all and (min-width: 768px) and (max-width: 1024px) { }
- 
-@media all and (min-width: 480px) and (max-width: 768px) { }
+@media all and (max-width: 835px) {
+
+  .Option-box{
+    width: 70%;
+  }
+
+  .background .heroback{
+    z-index: -1;
+  }
+ }
  
 @media all and (max-width: 480px) { 
   .Hero_title h1 {
-    font-size: 6.2em;
-    margin-left: -0.3em;
+    font-size: 6em;
+    /* margin-left: -0.3em; */
   }
 
   .Hero_title {
@@ -60,7 +152,6 @@
   
   .Hero_subtext .button-content h3{
     font-size: 1.3em;
-    text-align: center;
   }
 
   .Hero_subtext h3 span {
