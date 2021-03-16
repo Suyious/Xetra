@@ -208,7 +208,7 @@ body {
   margin: 5em 0;
 }
 
-.sidebar ul li {
+.sidebar ul li{
   margin: 0.3em;
   border-radius: 10px;
   padding: 1em 2em;
@@ -217,6 +217,15 @@ body {
   font-family: Poppins;
   color: #fff;
   cursor: pointer;
+}
+
+.sidebar p{
+  margin: 0.3em;
+  padding: 1em 2em;
+  font-size: 1.5em;
+  color: #fff;
+  font-family: Poppins;
+  width: 19em;
 }
 
 .sidebar ul li:hover {

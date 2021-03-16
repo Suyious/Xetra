@@ -75,9 +75,7 @@ function Navigation({handleScroll,scrolled}) {
       <div className="Rightbar">
         <Sidebar Open={CartOpen}>
           <ul>
-            <li>Hello</li>
-            <li>Hello</li>
-            <li>Hello</li>
+            <p>Your Cart is empty</p>
           </ul>
         </Sidebar>
       </div>
